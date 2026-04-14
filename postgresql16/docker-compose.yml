@@ -1,0 +1,23 @@
+services:
+  postgres:
+    container_name: postgres16_container
+    image: postgres:16.10
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: payment_integration_test
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    external: true
+
+volumes:
+    postgres:
+    pgadmin:
