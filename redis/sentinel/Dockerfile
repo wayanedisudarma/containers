@@ -1,4 +1,4 @@
-FROM redis:3
+FROM redis:8.8.0
 
 MAINTAINER Li Yi <denverdino@gmail.com>
 
