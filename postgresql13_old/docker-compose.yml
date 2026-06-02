@@ -13,19 +13,6 @@ services:
       - "5433:5432"
     networks:
       - shared-network
-  
-  pgadmin:
-    container_name: pgadmin13_container
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-wayan.sudarma@gmail.com}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
-    volumes:
-       - pgadmin:/root/.pgadmin
-    ports:
-      - "${PGADMIN_PORT:-5151}:80"
-    networks:
-      - shared-network
 
 networks:
   shared-network:
@@ -33,4 +20,3 @@ networks:
 
 volumes:
     postgres:
-    pgadmin:
