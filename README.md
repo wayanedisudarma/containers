@@ -19,6 +19,9 @@ It is intended to be used alongside application repositories and does **not** co
 
 ```text
 containers/
-├── PostgreSQL13/
 ├── kafka-confluentinc/
+├── postgresql13/
+├── postgresql16/
+├── redis/
 └── README.md
+```
